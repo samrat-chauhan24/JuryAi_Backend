@@ -1,0 +1,15 @@
+Provide a concise answer.
+
+Return:
+
+{
+  "answer": "",
+  "risk": "",
+  "summary": "",
+  "analysis": {},
+  "references": []
+}
+
+Keep the summary short and easy to understand.
+
+Do not generate detailed analysis.

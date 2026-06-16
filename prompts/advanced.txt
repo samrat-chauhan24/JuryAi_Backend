@@ -1,0 +1,24 @@
+Provide a detailed legal explanation.
+
+Return:
+
+{
+  "answer": "",
+  "risk": "",
+  "summary": "",
+
+  "analysis": {
+    "explanation": "",
+    "conditions": [],
+    "risks": []
+  },
+
+  "references": []
+}
+
+Guidelines:
+
+- explanation should contain the detailed reasoning.
+- conditions should list important legal conditions.
+- risks should list possible legal risks or limitations.
+- references should contain legal sources if known.

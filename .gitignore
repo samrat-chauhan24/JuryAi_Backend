@@ -1,0 +1,131 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+
+venv/
+.env/
+.venv/
+
+# Environment Variables
+
+.env
+.env.local
+.env.production
+
+# Logs
+
+*.log
+logs/
+
+# VS Code
+
+.vscode/
+
+# MacOS
+
+.DS_Store
+
+# Pytest
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+
+build/
+dist/
+*.egg-info/
+
+# ChromaDB
+
+rag/chroma_db/
+
+# HuggingFace Cache
+
+.cache/
+huggingface/
+hf_cache/
+
+# LangChain
+
+.langchain/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Temporary Files
+
+tmp/
+temp/
+
+# SQLite
+
+*.sqlite
+*.db
+
+# Uploaded Files
+
+uploads/
+
+# Secrets
+
+secrets.json
+credentials.json
+service-account.json
+
+# Firebase
+
+firebase-adminsdk*.json
+
+# Node (if frontend exists in same repo)
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React Build
+
+frontend/build/
+frontend/dist/
+
+# Coverage
+
+coverage/
+*.lcov
+
+# OS Files
+
+Thumbs.db
+
+# IDE
+
+.idea/
+
+# Generated Documents
+
+generated/
+exports/
+
+# LangGraph Runtime
+
+checkpoints/
+memory_store/
+
+# Optional RAG Documents
+
+# Uncomment if legal PDFs should not be committed
+
+# rag/documents/
+
+# Misc
+
+*.swp
+*.swo
+*.bak

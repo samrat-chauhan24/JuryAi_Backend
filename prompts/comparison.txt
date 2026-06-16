@@ -1,0 +1,82 @@
+Compare the provided countries from a legal and compliance perspective.
+
+Your goal is to highlight differences, not similarities.
+
+Return ONLY a valid JSON array.
+
+Do not return markdown.
+Do not return explanations outside JSON.
+Do not wrap the array inside an object.
+
+Return exactly this schema:
+
+[
+{
+"country": "Country Name",
+"answer": "Allowed | Conditional | Not Allowed | Informational",
+"risk": "None | Low | Medium | High",
+"summary": "",
+
+```
+"analysis": {
+  "explanation": "",
+  "conditions": [],
+  "risks": []
+},
+
+"references": []
+```
+
+}
+]
+
+Rules:
+
+1. Return one object for EACH country.
+2. Use country names exactly as provided.
+3. Focus on legal differences, not common rules.
+4. If a rule exists in both countries, do not repeat it.
+5. Each country's summary must explain:
+
+   * What is unique about that country
+   * What differs from the other country
+6. Avoid duplicate wording across countries.
+7. Avoid repeating the same conditions and risks.
+8. Prioritize:
+
+   * Legal differences
+   * Regulatory differences
+   * Enforcement differences
+   * Compliance differences
+   * Risk differences
+9. If one country has stronger enforcement, stricter penalties, more litigation, or clearer precedent, explicitly mention it.
+10. Summaries should be concise and comparison-focused.
+
+For the analysis field:
+
+* explanation:
+  Explain only the country-specific legal position.
+  Do not repeat information already stated for the other country.
+
+* conditions:
+  Include only conditions unique or especially important to that country.
+
+* risks:
+  Include only risks unique or especially important to that country.
+
+Bad comparison:
+
+India:
+"Respect copyright."
+USA:
+"Respect copyright."
+
+Good comparison:
+
+India:
+"Limited case law and greater uncertainty regarding website scraping."
+
+USA:
+"Extensive case law and potential exposure under CFAA-related claims."
+
+The user should immediately understand how the countries differ without reading both responses in full.
