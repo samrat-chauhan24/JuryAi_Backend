@@ -9,16 +9,39 @@ def formatter_node(state):
         for item in answer:
 
             formatted.append({
-                "country": item.get("country", ""),
-                "answer": item.get("answer", ""),
-                "risk": item.get("risk", ""),
-                "summary": item.get("summary", ""),
+                "country": item.get(
+                    "country",
+                    ""
+                ),
+
+                "answer": item.get(
+                    "answer",
+                    ""
+                ),
+
+                "risk": item.get(
+                    "risk",
+                    ""
+                ),
+
+                "summary": item.get(
+                    "summary",
+                    ""
+                ),
+
                 "analysis": item.get(
                     "analysis",
                     {}
                 ),
+
+                # Comparison mode still uses model references
                 "references": item.get(
                     "references",
+                    []
+                ),
+
+                "citations": item.get(
+                    "citations",
                     []
                 )
             })
@@ -28,6 +51,7 @@ def formatter_node(state):
     else:
 
         state["answer"] = {
+
             "answer": answer.get(
                 "answer",
                 ""
@@ -48,8 +72,15 @@ def formatter_node(state):
                 {}
             ),
 
-            "references": answer.get(
+            # Use RAG references
+            "references": state.get(
                 "references",
+                []
+            ),
+
+            # New citations field
+            "citations": state.get(
+                "citations",
                 []
             )
         }

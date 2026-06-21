@@ -15,6 +15,7 @@ class LegalState(TypedDict):
     # RAG
     documents: list[str]
     references: list[str]
+    citations: list[dict]
     best_retrieval_score: float
 
     # Final AI response
